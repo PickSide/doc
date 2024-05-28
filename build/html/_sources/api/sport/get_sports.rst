@@ -1,28 +1,29 @@
 Get Sports
 ==========
 
-.. tip::
-    Retrieves the list of sports.
-
 Request
 -------
 
 ``GET /api/v2/sports``
 
-**Headers**
-  - `Authorization: Bearer <token>`
-
 **Response Body**
 
 .. code-block:: json
 
-    [
+  [
+    {
+      "message": "Fetched locales",
+      "results": [
         {
-            "id": "123",
-            "name": "Soccer"
-        },
-        ...
-    ]
+          "id": "123",
+          "featureAvailable": true,
+          "gameModes": "5v5,11v11",
+          "name": "name"
+      ],
+      "success": true,
+    },
+    "..."
+  ]
 
 Response table
 **************
@@ -34,7 +35,7 @@ Response table
     * - Status 
       - Reason
     * - ``200``
-      - Sports retrieved
+      - Locales retrieved
     * - ``401``
       - Unauthorized
     * - ``500``

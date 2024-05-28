@@ -362,26 +362,23 @@ document.write(`
                   
   <section id="get-sports">
 <h1>Get Sports<a class="headerlink" href="#get-sports" title="Link to this heading">#</a></h1>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Retrieves the list of sports.</p>
-</div>
 <section id="request">
 <h2>Request<a class="headerlink" href="#request" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">/api/v2/sports</span></code></p>
-<dl class="simple">
-<dt><strong>Headers</strong></dt><dd><ul class="simple">
-<li><p><cite>Authorization: Bearer &lt;token&gt;</cite></p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>Response Body</strong></p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
-<span class="w">    </span><span class="p">{</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Fetched locales&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;results&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
 <span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;123&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Soccer&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="err">...</span>
+<span class="w">        </span><span class="nt">&quot;featureAvailable&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;gameModes&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;5v5,11v11&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;name&quot;</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="s2">&quot;...&quot;</span>
 <span class="p">]</span>
 </pre></div>
 </div>
@@ -399,7 +396,7 @@ document.write(`
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">200</span></code></p></td>
-<td><p>Sports retrieved</p></td>
+<td><p>Locales retrieved</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">401</span></code></p></td>
 <td><p>Unauthorized</p></td>

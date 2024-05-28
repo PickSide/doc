@@ -1,15 +1,12 @@
 Get Friend Requests
 ===================
 
-.. tip::
-    Retrieves the list of friend requests for a user.
-
 Request
 -------
 
 ``GET /api/v2/friends/requests/user/:userID``
 
-**Headers**
+**Params**
   - `Authorization: Bearer <token>`
 
 **Response Body**
@@ -18,11 +15,9 @@ Request
 
     [
         {
-            "id": "request_id",
-            "from": {
-                "id": "user_id",
-                "fullName": "User Name"
-            }
+            "user1Id": "1",
+            "user2Id": "2",
+            "status": "pending"
         },
         ...
     ]

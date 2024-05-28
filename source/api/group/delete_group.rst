@@ -4,27 +4,19 @@ Delete Group
 Request
 -------
 
-``DELETE /api/v2/group``
+``DELETE /api/v2/group/:groupID``
 
-**Headers**
+**Params**
 
-- `Content-Type: application/json`
-- `Authorization: Bearer <token>`
-
-**Request Body**
-
-.. code-block:: json
-    
-    {
-        
-    }
+- ``groupID`` - The targetted user
 
 **Response Body**
 
 .. code-block:: json
 
     {
-        
+      "message": "Group deleted",
+      "success": true
     }
 
 

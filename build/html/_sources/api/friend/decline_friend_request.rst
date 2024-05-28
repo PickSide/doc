@@ -7,7 +7,7 @@ Decline Friend Request
 Request
 -------
 
-``PUT /api/v2/friends/decline``
+``PUT /api/v2/friends/decline?userKeys=1,2,3``
 
 **Headers**
   - `Content-Type: application/json`
@@ -26,8 +26,8 @@ Request
 .. code-block:: json
 
     {
-        "status": "success",
         "message": "Friend request declined"
+        "success": true,
     }
 
 Response table

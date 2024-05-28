@@ -1,28 +1,29 @@
 Get Locales
 ===========
 
-.. tip::
-    Retrieves the list of locales.
-
 Request
 -------
 
 ``GET /api/v2/locales``
 
-**Headers**
-  - `Authorization: Bearer <token>`
-
 **Response Body**
 
 .. code-block:: json
 
-    [
+  [
+    {
+      "message": "Fetched locales",
+      "results": [
         {
-            "id": "123",
-            "name": "Locale Name"
-        },
-        ...
-    ]
+          "id": "123",
+          "flagCode": "fr",
+          "name": "French",
+          "value": "fr"
+      ],
+      "success": true,
+    },
+    "..."
+  ]
 
 Response table
 **************

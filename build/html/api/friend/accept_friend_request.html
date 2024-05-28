@@ -368,24 +368,11 @@ document.write(`
 </div>
 <section id="request">
 <h2>Request<a class="headerlink" href="#request" title="Link to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">PUT</span> <span class="pre">/api/v2/friends/accept</span></code></p>
-<dl class="simple">
-<dt><strong>Headers</strong></dt><dd><ul class="simple">
-<li><p><cite>Content-Type: application/json</cite></p></li>
-<li><p><cite>Authorization: Bearer &lt;token&gt;</cite></p></li>
-</ul>
-</dd>
-</dl>
-<p><strong>Request Body</strong></p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;requestID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;request_id&quot;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
+<p><code class="docutils literal notranslate"><span class="pre">PUT</span> <span class="pre">/api/v2/friends/accept?userKeys=1,2,3</span></code></p>
 <p><strong>Response Body</strong></p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Friend request accepted&quot;</span>
+<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Request accepted&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 <span class="p">}</span>
 </pre></div>
 </div>

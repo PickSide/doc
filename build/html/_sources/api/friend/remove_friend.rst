@@ -1,33 +1,18 @@
 Remove Friend
 =============
 
-.. tip::
-    Removes a friend.
-
 Request
 -------
 
-``DELETE /api/v2/friends``
-
-**Headers**
-  - `Content-Type: application/json`
-  - `Authorization: Bearer <token>`
-
-**Request Body**
-
-.. code-block:: json
-    
-    {
-        "friendID": "friend_id"
-    }
+``DELETE /api/v2/friends?userKeys=1,2``
 
 **Response Body**
 
 .. code-block:: json
 
     {
-        "status": "success",
         "message": "Friend removed"
+        "success": true,
     }
 
 Response table

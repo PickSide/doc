@@ -7,19 +7,7 @@ Send Friend Request
 Request
 -------
 
-``POST /api/v2/friends/request``
-
-**Headers**
-  - `Content-Type: application/json`
-  - `Authorization: Bearer <token>`
-
-**Request Body**
-
-.. code-block:: json
-    
-    {
-        "toUserID": "user_id"
-    }
+``POST /api/v2/friends/request?userKeys=1,2``
 
 **Response Body**
 

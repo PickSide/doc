@@ -362,15 +362,11 @@ document.write(`
                   
   <section id="get-friend-requests">
 <h1>Get Friend Requests<a class="headerlink" href="#get-friend-requests" title="Link to this heading">#</a></h1>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Retrieves the list of friend requests for a user.</p>
-</div>
 <section id="request">
 <h2>Request<a class="headerlink" href="#request" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">/api/v2/friends/requests/user/:userID</span></code></p>
 <dl class="simple">
-<dt><strong>Headers</strong></dt><dd><ul class="simple">
+<dt><strong>Params</strong></dt><dd><ul class="simple">
 <li><p><cite>Authorization: Bearer &lt;token&gt;</cite></p></li>
 </ul>
 </dd>
@@ -378,11 +374,9 @@ document.write(`
 <p><strong>Response Body</strong></p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;request_id&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;from&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;user_id&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;fullName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;User Name&quot;</span>
-<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="nt">&quot;user1Id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;user2Id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pending&quot;</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="err">...</span>
 <span class="p">]</span>

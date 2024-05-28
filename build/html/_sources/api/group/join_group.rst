@@ -4,28 +4,21 @@ Join Group
 Request
 -------
 
-``GET /api/v2/group/{groupId}/join/user/{userId}``
+``PUT /api/v2/group/:groupID/join/user/:userID``
 
-**Headers**
+**Params**
 
-- `Content-Type: application/json`
-- `Authorization: Bearer <token>`
-
-**Request Body**
-
-.. code-block:: json
-    
-    {
-        
-    }
+- ``groupID`` - The targetted group
+- ``userID`` - The targetted user
 
 **Response Body**
 
 .. code-block:: json
 
-    {
-        
-    }
+  {
+    "message": "Joined group",
+    "success": false,
+  }
 
 
 Response table

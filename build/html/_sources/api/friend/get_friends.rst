@@ -1,16 +1,13 @@
 Get Friends
 ===========
 
-.. tip::
-    Retrieves the list of friends for a user.
-
 Request
 -------
 
 ``GET /api/v2/friends/user/:userID``
 
 **Headers**
-  - `Authorization: Bearer <token>`
+  - ``userID`` - The targetted user
 
 **Response Body**
 
@@ -18,9 +15,9 @@ Request
 
     [
         {
-            "id": "friend_id",
-            "fullName": "Friend Name",
-            "email": "friend@example.com"
+            "user1Id": "1",
+            "user2Id": "2",
+            "status": "accepted"
         },
         ...
     ]

@@ -20,9 +20,30 @@ Request
 
 .. code-block:: json
 
-    {
-        
-    }
+  {
+    "message": "Successfully fetched groups",
+    "results": [
+      {
+        "id": "123",
+        "description": "description",
+        "name": "name",
+        "organizerId": "1",
+        "organizer": {
+          "..."
+        },
+        "members": [
+          "..."
+        ],
+        "requiresApproval": true,
+        "sportId": "1",
+        "visibility": "public",
+        "createdAt": "2024-06-01T10:00:00Z",
+        "updateAt": "2024-06-01T10:00:00Z"
+      },
+      "..."
+    ]
+    "success": true
+  }
 
 
 Response table

@@ -364,21 +364,15 @@ document.write(`
 <h1>Delete Group<a class="headerlink" href="#delete-group" title="Link to this heading">#</a></h1>
 <section id="request">
 <h2>Request<a class="headerlink" href="#request" title="Link to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">DELETE</span> <span class="pre">/api/v2/group</span></code></p>
-<p><strong>Headers</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">DELETE</span> <span class="pre">/api/v2/group/:groupID</span></code></p>
+<p><strong>Params</strong></p>
 <ul class="simple">
-<li><p><cite>Content-Type: application/json</cite></p></li>
-<li><p><cite>Authorization: Bearer &lt;token&gt;</cite></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groupID</span></code> - The targetted user</p></li>
 </ul>
-<p><strong>Request Body</strong></p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-
-<span class="p">}</span>
-</pre></div>
-</div>
 <p><strong>Response Body</strong></p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Group deleted&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 <span class="p">}</span>
 </pre></div>
 </div>

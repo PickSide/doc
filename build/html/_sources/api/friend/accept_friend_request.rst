@@ -7,27 +7,16 @@ Accept Friend Request
 Request
 -------
 
-``PUT /api/v2/friends/accept``
+``PUT /api/v2/friends/accept?userKeys=1,2,3``
 
-**Headers**
-  - `Content-Type: application/json`
-  - `Authorization: Bearer <token>`
-
-**Request Body**
-
-.. code-block:: json
-    
-    {
-        "requestID": "request_id"
-    }
 
 **Response Body**
 
 .. code-block:: json
 
     {
-        "status": "success",
-        "message": "Friend request accepted"
+        "message": "Request accepted",
+        "success": true
     }
 
 Response table

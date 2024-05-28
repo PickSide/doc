@@ -6,26 +6,19 @@ Request
 
 ``DELETE /api/v2/group/{groupId}/join/user/{userId}``
 
-**Headers**
+**Params**
 
-- `Content-Type: application/json`
-- `Authorization: Bearer <token>`
-
-**Request Body**
-
-.. code-block:: json
-    
-    {
-        
-    }
+- ``groupID`` - The targetted group
+- ``userID`` - The targetted user
 
 **Response Body**
 
 .. code-block:: json
-
-    {
-        
-    }
+  
+  {
+    "message": "Left group",
+    "success": false,
+  }
 
 Response table
 **************

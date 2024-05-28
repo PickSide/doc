@@ -362,25 +362,21 @@ document.write(`
                   
   <section id="get-friends">
 <h1>Get Friends<a class="headerlink" href="#get-friends" title="Link to this heading">#</a></h1>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Retrieves the list of friends for a user.</p>
-</div>
 <section id="request">
 <h2>Request<a class="headerlink" href="#request" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">/api/v2/friends/user/:userID</span></code></p>
 <dl class="simple">
 <dt><strong>Headers</strong></dt><dd><ul class="simple">
-<li><p><cite>Authorization: Bearer &lt;token&gt;</cite></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userID</span></code> - The targetted user</p></li>
 </ul>
 </dd>
 </dl>
 <p><strong>Response Body</strong></p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;friend_id&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;fullName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Friend Name&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;friend@example.com&quot;</span>
+<span class="w">        </span><span class="nt">&quot;user1Id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;user2Id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;accepted&quot;</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="err">...</span>
 <span class="p">]</span>
