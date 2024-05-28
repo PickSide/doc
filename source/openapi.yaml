@@ -1,0 +1,290 @@
+openapi: 3.0.0
+info:
+  title: Pickside External service API
+  version: 3.1.0
+  description: API specifications of the pickside's available endpoints. Please note that the project is still under development.
+
+paths:
+  /api/v2/health:
+    get:
+      summary: Check the health of the service
+      responses:
+        '200':
+          description: Health check successful
+
+  /api/v2/activities:
+    get:
+      summary: Get a list of activities
+      responses:
+        '200':
+          description: Successful operation
+    post:
+      summary: Create a new activity
+      responses:
+        '201':
+          description: Activity created successfully
+
+  /api/v2/activities/{activityID}/participants:
+    get:
+      summary: Get participants of a specific activity
+      parameters:
+        - name: activityID
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+
+  /api/v2/activities/registration:
+    put:
+      summary: Register for an activity
+      responses:
+        '200':
+          description: Registration successful
+
+  /api/v2/groups/user/{userID}:
+    get:
+      summary: Get groups a user belongs to
+      parameters:
+        - name: userID
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+
+  /api/v2/group/{groupID}:
+    get:
+      summary: Get details of a group
+      parameters:
+        - name: groupID
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+    post:
+      summary: Create a new group
+      responses:
+        '201':
+          description: Group created successfully
+
+  /api/v2/group-join/{groupID}/user/{userID}:
+    put:
+      summary: Join a group
+      parameters:
+        - name: groupID
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: userID
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Joined group successfully
+
+  /api/v2/group-leave/{groupID}/user/{userID}:
+    delete:
+      summary: Leave a group
+      parameters:
+        - name: groupID
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: userID
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Left group successfully
+
+  /api/v2/group-delete/{groupID}/organizer/{organizerID}:
+    delete:
+      summary: Delete a group
+      parameters:
+        - name: groupID
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: organizerID
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Group deleted successfully
+
+  /api/v2/locales:
+    get:
+      summary: Get a list of locales
+      responses:
+        '200':
+          description: Successful operation
+
+  /api/v2/sports:
+    get:
+      summary: Get a list of sports
+      responses:
+        '200':
+          description: Successful operation
+
+  /api/v2/users:
+    get:
+      summary: Get a list of users
+      responses:
+        '200':
+          description: Successful operation
+
+  /api/v2/user/{userID}/details:
+    get:
+      summary: Get details of a user
+      parameters:
+        - name: userID
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+
+  /api/v2/user/{userID}/activities/favorites:
+    get:
+      summary: Get favorite activities of a user
+      parameters:
+        - name: userID
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+
+  /api/v2/user/{userID}/activities/{activityID}/favorites:
+    put:
+      summary: Update favorite activities of a user
+      parameters:
+        - name: userID
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: activityID
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Updated successfully
+
+  /api/v2/user/{userID}/settings:
+    put:
+      summary: Update user settings
+      parameters:
+        - name: userID
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Settings updated successfully
+
+  /api/v2/me:
+    get:
+      summary: Get details of the authenticated user
+      responses:
+        '200':
+          description: Successful operation
+
+  /api/v2/login:
+    post:
+      summary: User login
+      responses:
+        '200':
+          description: Login successful
+
+  /api/v2/signup:
+    post:
+      summary: User signup
+      responses:
+        '201':
+          description: Signup successful
+
+  /api/v2/logout:
+    post:
+      summary: User logout
+      responses:
+        '200':
+          description: Logout successful
+
+  /api/v2/friends/user/{userID}:
+    get:
+      summary: Get friends of a user
+      parameters:
+        - name: userID
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+
+  /api/v2/friends/requests/user/{userID}:
+    get:
+      summary: Get friend requests of a user
+      parameters:
+        - name: userID
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+
+  /api/v2/friends/request:
+    post:
+      summary: Send a friend request
+      responses:
+        '201':
+          description: Friend request sent successfully
+
+  /api/v2/friends/accept:
+    put:
+      summary: Accept a friend request
+      responses:
+        '200':
+          description: Friend request accepted successfully
+
+  /api/v2/friends/decline:
+    put:
+      summary: Decline a friend request
+      responses:
+        '200':
+          description: Friend request declined successfully
+
+  /api/v2/friends:
+    delete:
+      summary: Remove a friend
+      responses:
+        '200':
+          description: Friend removed successfully
