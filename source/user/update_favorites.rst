@@ -4,7 +4,7 @@ Update Favorites
 Request
 -------
 
-``PUT /api/v2/user/{userId}/activities/{activityId}/favorites``
+``PUT /api/v2/users/{userId}/activities/{activityId}/favorites``
 
 **Response Body**
 

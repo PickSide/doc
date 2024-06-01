@@ -4,7 +4,7 @@ Get Group
 Request
 -------
 
-``GET /api/v2/group/{groupId}``
+``GET /api/v2/groups/{groupId}``
 
 **Params**
   - ``groupId`` - The targetted group

@@ -7,7 +7,7 @@ Get User Details
 Request
 -------
 
-``GET /api/v2/user/{userId}/details``
+``GET /api/v2/users/{userId}/details``
 
 **Params**
   - ``userId`` - The targetted user

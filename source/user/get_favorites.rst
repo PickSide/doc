@@ -4,7 +4,7 @@ Get Favorites
 Request
 -------
 
-``GET /api/v2/user/{userId}/activities/favorites``
+``GET /api/v2/users/{userId}/activities/favorites``
 
 **Params**
   - ``userId`` - The targetted user

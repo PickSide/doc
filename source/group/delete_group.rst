@@ -4,7 +4,7 @@ Delete Group
 Request
 -------
 
-``DELETE /api/v2/group/{groupId}``
+``DELETE /api/v2/groups/{groupId}``
 
 **Params**
   - ``groupId`` - The targetted user

@@ -4,7 +4,7 @@ Join Group
 Request
 -------
 
-``PUT /api/v2/group/{groupId}/join/user/{userId}``
+``PUT /api/v2/groups/{groupId}/join/users/{userId}``
 
 **Params**
   - ``groupId`` - The targetted group

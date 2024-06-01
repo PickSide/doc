@@ -4,7 +4,7 @@ Get Groups For User
 Request
 -------
 
-``GET /api/v2/groups/user/{userId}``
+``GET /api/v2/groups/users/{userId}``
 
 **Params**
   - ``userId`` - The targetted user
