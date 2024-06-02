@@ -24,6 +24,13 @@ Request
         "..."
       },
       "members": [
+        {
+          "id": "123",
+          "avatar": "https://link-to-avatar.com",
+          "displayName": "ah",
+          "email": "ah@example.com",
+          "fullName": "a h"
+        },
         "..."
       ],
       "requiresApproval": true,
