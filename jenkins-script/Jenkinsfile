@@ -1,0 +1,56 @@
+pipeline {
+    agent any
+
+    environment {
+        SERVICE_NAME='doc'
+        DOCKERHUB_CREDENTIALS = credentials('docker-creds')
+        DOCKERHUB_USERNAME = 'thenoobgrammer'
+        REPO_BASE = 'pickside-service'
+        TAG = 'latest'
+        PLATFORM = 'linux/amd64'
+    }
+
+    stages {
+        stage('Login to Docker Hub') {
+            steps {
+                withCredentials([usernamePassword(credentialsId: 'docker-creds', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
+                    sh 'echo $DOCKER_PASSWORD | docker login --username $DOCKER_USERNAME --password-stdin'
+                }
+            }
+        }
+        stage('Pull Docker Image') {
+            steps {
+                sh "docker pull ${DOCKERHUB_USERNAME}/${REPO_BASE}:${SERVICE_NAME}-${TAG}"
+            }
+        }
+        stage('Stop and Remove Existing Container') {
+            steps {
+                script {
+                    // Check if the container is running and stop it
+                    sh """
+                    if [ \$(docker ps -q -f name=${SERVICE_NAME}) ]; then
+                        docker stop ${SERVICE_NAME}
+                    fi
+                    """
+                    // Remove the container if it exists
+                    sh """
+                    if [ \$(docker ps -aq -f name=${SERVICE_NAME}) ]; then
+                        docker rm ${SERVICE_NAME}
+                    fi
+                    """
+                }
+            }
+        }
+        stage('Run Docker Container') {
+            steps {
+                sh "docker run -d -p 8000:8000 --name ${SERVICE_NAME} ${DOCKERHUB_USERNAME}/${REPO_BASE}:${SERVICE_NAME}-${TAG}"
+            }
+        }
+    }
+
+    post {
+        always {
+            sh "docker logout"
+        }
+    }
+}
