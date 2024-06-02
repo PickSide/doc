@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        SERVICE_NAME='doc'
+        SERVICE_NAME = 'doc'
         DOCKERHUB_CREDENTIALS = credentials('docker-creds')
         DOCKERHUB_USERNAME = 'thenoobgrammer'
         REPO_BASE = 'pickside-service'
@@ -15,6 +15,22 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'docker-creds', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
                     sh 'echo $DOCKER_PASSWORD | docker login --username $DOCKER_USERNAME --password-stdin'
+                }
+            }
+        }
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    // Build the Docker image
+                    sh "docker build -t ${DOCKERHUB_USERNAME}/${REPO_BASE}:${SERVICE_NAME}-${TAG} ."
+                }
+            }
+        }
+        stage('Push Docker Image') {
+            steps {
+                script {
+                    // Push the Docker image to Docker Hub
+                    sh "docker push ${DOCKERHUB_USERNAME}/${REPO_BASE}:${SERVICE_NAME}-${TAG}"
                 }
             }
         }
@@ -44,6 +60,11 @@ pipeline {
         stage('Run Docker Container') {
             steps {
                 sh "docker run -d -p 8000:8000 --name ${SERVICE_NAME} ${DOCKERHUB_USERNAME}/${REPO_BASE}:${SERVICE_NAME}-${TAG}"
+            }
+        }
+        stage('Cleanup Unused Docker Images') {
+            steps {
+                sh "docker image prune -f"
             }
         }
     }
