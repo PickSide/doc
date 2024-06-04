@@ -4,7 +4,7 @@ Leave Group
 Request
 -------
 
-``DELETE /api/v2/group/{groupId}/join/user/{userId}``
+``DELETE /api/v2/groups/{groupId}/leave/users/{userId}``
 
 **Params**
   - ``groupId`` - The targetted group

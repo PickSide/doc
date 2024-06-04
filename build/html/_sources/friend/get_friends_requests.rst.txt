@@ -4,7 +4,7 @@ Get Friend Requests
 Request
 -------
 
-``GET /api/v2/friends/requests/user/{userId}``
+``GET /api/v2/friends/requests/users/{userId}``
 
 **Params**
   - ``userId`` - The targetted user

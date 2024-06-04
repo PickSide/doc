@@ -4,7 +4,7 @@ Send Friend Request
 Request
 -------
 
-``POST /api/v2/friends/request?userKeys=1,2``
+``POST /api/v2/friends/requests?userKeys=1,2``
 
 **Query**
   - ``userKeys`` - The users involved in the friendship

@@ -4,7 +4,7 @@ Get Group
 Request
 -------
 
-``GET /api/v2/group/{groupId}``
+``GET /api/v2/groups/{groupId}``
 
 **Params**
   - ``groupId`` - The targetted group
@@ -24,6 +24,13 @@ Request
         "..."
       },
       "members": [
+        {
+          "id": "123",
+          "avatar": "https://link-to-avatar.com",
+          "displayName": "ah",
+          "email": "ah@example.com",
+          "fullName": "a h"
+        },
         "..."
       ],
       "requiresApproval": true,

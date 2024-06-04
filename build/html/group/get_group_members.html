@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Get Favorites &mdash; External service 3.1.0 documentation</title>
+  <title>Get Group Members &mdash; External service 3.1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
 
@@ -20,9 +20,7 @@
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Get User Details" href="get_user_details.html" />
-    <link rel="prev" title="User" href="index.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -50,27 +48,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Api</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../activity/index.html">Activity</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../friend/index.html">Friend</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../group/index.html">Group</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Group</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../locale/index.html">Locale</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../session/index.html">Session</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../sport/index.html">Sport</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">User</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Get Favorites</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#request">Request</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#response-table">Response table</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="get_user_details.html">Get User Details</a></li>
-<li class="toctree-l2"><a class="reference internal" href="get_users.html">Get Users</a></li>
-<li class="toctree-l2"><a class="reference internal" href="update_favorites.html">Update Favorites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="update_settings.html">Update Settings</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../user/index.html">User</a></li>
 </ul>
 
         </div>
@@ -87,10 +72,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="index.html">User</a></li>
-      <li class="breadcrumb-item active">Get Favorites</li>
+      <li class="breadcrumb-item active">Get Group Members</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/user/get_favorites.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/group/get_group_members.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -98,28 +82,28 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="get-favorites">
-<h1>Get Favorites<a class="headerlink" href="#get-favorites" title="Link to this heading"></a></h1>
+  <section id="get-group-members">
+<h1>Get Group Members<a class="headerlink" href="#get-group-members" title="Link to this heading"></a></h1>
 <section id="request">
 <h2>Request<a class="headerlink" href="#request" title="Link to this heading"></a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">/api/v2/users/{userId}/activities/favorites</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">/api/v2/groups/{groupId}/members</span></code></p>
 <dl class="simple">
 <dt><strong>Params</strong></dt><dd><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">userId</span></code> - The targetted user</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groupId</span></code> - The targetted group</p></li>
 </ul>
 </dd>
 </dl>
 <p><strong>Response Body</strong></p>
-<p>Also see <a class="reference internal" href="../activity/get_activity.html#get-activity"><span class="std std-ref">Get Activity</span></a> to see the full response object</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="nt">&quot;Succesfully fetched favorites&quot;</span>
 <span class="w">  </span><span class="nt">&quot;results&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;123&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Activity Title&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="s2">&quot;...&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="s2">&quot;...&quot;</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;123&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;avatar&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://link-to-avatar.com&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;displayName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ah&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ah@example.com&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;fullName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;a h&quot;</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="s2">&quot;...&quot;</span>
 <span class="w">  </span><span class="p">],</span>
 <span class="w">  </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 <span class="p">}</span>
@@ -138,17 +122,23 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">200</span></code></p></td>
-<td><p>Favorites retrieved</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">201</span></code></p></td>
+<td><p>Activity created</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">401</span></code></p></td>
-<td><p>Unauthorized</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">400</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">401</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">403</span></code></p></td>
+<td></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">404</span></code></p></td>
-<td><p>User not found</p></td>
+<td></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">500</span></code></p></td>
-<td><p>Internal server error</p></td>
+<td><p>Internal creation error</p></td>
 </tr>
 </tbody>
 </table>
@@ -159,10 +149,7 @@
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="User" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="get_user_details.html" class="btn btn-neutral float-right" title="Get User Details" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

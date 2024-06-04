@@ -4,7 +4,7 @@ Create Group
 Request
 -------
 
-``POST /api/v2/group``
+``POST /api/v2/groups``
 
 **Request Body**
 

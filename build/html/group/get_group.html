@@ -103,7 +103,7 @@
 <h1>Get Group<a class="headerlink" href="#get-group" title="Link to this heading"></a></h1>
 <section id="request">
 <h2>Request<a class="headerlink" href="#request" title="Link to this heading"></a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">/api/v2/group/{groupId}</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">/api/v2/groups/{groupId}</span></code></p>
 <dl class="simple">
 <dt><strong>Params</strong></dt><dd><ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">groupId</span></code> - The targetted group</p></li>
@@ -122,6 +122,13 @@
 <span class="w">      </span><span class="s2">&quot;...&quot;</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="nt">&quot;members&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;123&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;avatar&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://link-to-avatar.com&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;displayName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ah&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ah@example.com&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;fullName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;a h&quot;</span>
+<span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="s2">&quot;...&quot;</span>
 <span class="w">    </span><span class="p">],</span>
 <span class="w">    </span><span class="nt">&quot;requiresApproval&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>

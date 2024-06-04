@@ -4,7 +4,7 @@ Update Settings
 Request
 -------
 
-``PUT /api/v2/user/{userId}/settings``
+``PUT /api/v2/users/{userId}/settings``
 
 **Request Body**
 

@@ -8,5 +8,6 @@ Group
    delete_group
    get_group
    get_groups_for_user
+   get_group_members
    join_group
    leave_group
