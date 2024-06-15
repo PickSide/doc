@@ -18,10 +18,10 @@ Welcome to External service's documentation!
    :caption: Api
 
    activity/index
+   auth/index
    friend/index
    group/index
    locale/index
-   session/index
    sport/index
    user/index
 

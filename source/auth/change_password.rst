@@ -1,19 +1,23 @@
-Update Favorites
-================
+.. _change-password:
+
+Change Password
+===============
 
 Request
 -------
 
-``PUT /api/v2/users/{userId}/activities/{activityId}/favorites``
+``GET /api/v2/change-password``
+
+**Headers**
+  - `Authorization: Bearer <token>`
 
 **Response Body**
 
 .. code-block:: json
 
   {
-    "status": "success",
-    "result": "1,2,3,4,5"
-    "message": "Favorites updated"
+	"statusCode": 200,
+    "result": "password changed successfully"
   }
 
 Response table
@@ -26,12 +30,8 @@ Response table
     * - Status 
       - Reason
     * - ``200``
-      - Favorites updated
-    * - ``400``
-      - Bad request
+      - User details retrieved
     * - ``401``
       - Unauthorized
-    * - ``404``
-      - User or activity not found
     * - ``500``
       - Internal server error

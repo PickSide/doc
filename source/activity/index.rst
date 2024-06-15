@@ -5,6 +5,7 @@ Activity
    :maxdepth: 1
 
    create_activity
+   delete_activity
    get_participants
    get_activities
    get_activity
